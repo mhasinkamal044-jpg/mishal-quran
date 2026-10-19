@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تواصل معنا | مجمع مشعل الحميدي</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">📖 مجمع مشعل الحميدي</div>
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="progress.html">تقدمي</a>
+      <a href="contact.html" class="active">تواصل معنا</a>
+      <a href="#" id="logoutBtn" class="logout">تسجيل الخروج</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h2 class="page-title">📞 تواصل معنا</h2>
+
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>معلومات التواصل</h3>
+        <p><strong>📱 الجوال:</strong> +249110804736 </p>
+        <p><strong>✉️ البريد:</strong> mhasnkamal01@gmail.com</p>
+        <p><strong>📍 العنوان:</strong> عمارة أبيد - محلية الحصاحيصا</p>
+        <p><strong>🕐 أوقات العمل:</strong> من السبت إلى الخميس، 3 م - 9 م</p>
+        <p><strong>💬 واتساب الحلقة:</strong> +249110804736</p>
+      </div>
+
+      <form id="contactForm" class="contact-form">
+        <h3>أرسل لنا رسالة</h3>
+
+        <label for="cName">اسمك</label>
+        <input type="text" id="cName" placeholder="الاسم الكامل" required>
+
+        <label for="cEmail">البريد الإلكتروني</label>
+        <input type="email" id="cEmail" placeholder="example@mail.com" required>
+
+        <label for="cMessage">الرسالة</label>
+        <textarea id="cMessage" rows="5" placeholder="اكتب رسالتك هنا..." required></textarea>
+
+        <button type="submit" class="btn-primary">إرسال</button>
+        <p class="msg" id="contactMsg"></p>
+      </form>
+
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 مجمع مشعل الحميدي لتحفيظ القرآن الكريم</p>
+  </footer>
+
+  <script src="contact.js"></script>
+</body>
+</html>

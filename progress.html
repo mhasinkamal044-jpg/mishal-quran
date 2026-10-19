@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>تقدمي | مجمع مشعل الحميدي</title>
+  <link rel="stylesheet" href="progress.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="brand">📖 مجمع مشعل الحميدي</div>
+    <nav>
+      <a href="home.html">الرئيسية</a>
+      <a href="progress.html" class="active">تقدمي</a>
+      <a href="contact.html">تواصل معنا</a>
+      <a href="#" id="logoutBtn" class="logout">تسجيل الخروج</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <h2 class="page-title">📊 مراجعة تقدمك في الحفظ</h2>
+
+    <section class="stats">
+      <div class="stat-box">
+        <h3 id="totalAyahs">0</h3>
+        <p>آيات محفوظة</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="totalSurahs">0</h3>
+        <p>سور مكتملة</p>
+      </div>
+      <div class="stat-box">
+        <h3 id="streak">0</h3>
+        <p>أيام متتالية</p>
+      </div>
+    </section>
+
+    <section class="progress-section">
+      <h3>نسبة الإنجاز الكلية</h3>
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+      <p class="progress-text"><span id="progressPercent">0</span>% من خطة الحفظ</p>
+    </section>
+
+    <section class="surah-list">
+      <h3>السور المحفوظة</h3>
+      <table>
+        <thead>
+  <tr>
+    <th>السورة</th>
+    <th>عدد الآيات</th>
+    <th>الحالة</th>
+    <th>تاريخ الإتمام</th>
+    <th>إجراءات</th>
+  </tr>
+</thead>
+        <tbody id="surahTable"></tbody>
+      </table>
+    </section>
+
+    <section class="add-section">
+      <h3>➕ إضافة حفظ جديد</h3>
+      <form id="addForm">
+        <select id="surahSelect" required>
+  <option value="">اختر السورة</option>
+  <option value="الفاتحة">1. الفاتحة</option>
+  <option value="البقرة">2. البقرة</option>
+  <option value="آل عمران">3. آل عمران</option>
+  <option value="النساء">4. النساء</option>
+  <option value="المائدة">5. المائدة</option>
+  <option value="الأنعام">6. الأنعام</option>
+  <option value="الأعراف">7. الأعراف</option>
+  <option value="الأنفال">8. الأنفال</option>
+  <option value="التوبة">9. التوبة</option>
+  <option value="يونس">10. يونس</option>
+  <option value="هود">11. هود</option>
+  <option value="يوسف">12. يوسف</option>
+  <option value="الرعد">13. الرعد</option>
+  <option value="إبراهيم">14. إبراهيم</option>
+  <option value="الحجر">15. الحجر</option>
+  <option value="النحل">16. النحل</option>
+  <option value="الإسراء">17. الإسراء</option>
+  <option value="الكهف">18. الكهف</option>
+  <option value="مريم">19. مريم</option>
+  <option value="طه">20. طه</option>
+  <option value="الأنبياء">21. الأنبياء</option>
+  <option value="الحج">22. الحج</option>
+  <option value="المؤمنون">23. المؤمنون</option>
+  <option value="النور">24. النور</option>
+  <option value="الفرقان">25. الفرقان</option>
+  <option value="الشعراء">26. الشعراء</option>
+  <option value="النمل">27. النمل</option>
+  <option value="القصص">28. القصص</option>
+  <option value="العنكبوت">29. العنكبوت</option>
+  <option value="الروم">30. الروم</option>
+  <option value="لقمان">31. لقمان</option>
+  <option value="السجدة">32. السجدة</option>
+  <option value="الأحزاب">33. الأحزاب</option>
+  <option value="سبأ">34. سبأ</option>
+  <option value="فاطر">35. فاطر</option>
+  <option value="يس">36. يس</option>
+  <option value="الصافات">37. الصافات</option>
+  <option value="ص">38. ص</option>
+  <option value="الزمر">39. الزمر</option>
+  <option value="غافر">40. غافر</option>
+  <option value="فصلت">41. فصلت</option>
+  <option value="الشورى">42. الشورى</option>
+  <option value="الزخرف">43. الزخرف</option>
+  <option value="الدخان">44. الدخان</option>
+  <option value="الجاثية">45. الجاثية</option>
+  <option value="الأحقاف">46. الأحقاف</option>
+  <option value="محمد">47. محمد</option>
+  <option value="الفتح">48. الفتح</option>
+  <option value="الحجرات">49. الحجرات</option>
+  <option value="ق">50. ق</option>
+  <option value="الذاريات">51. الذاريات</option>
+  <option value="الطور">52. الطور</option>
+  <option value="النجم">53. النجم</option>
+  <option value="القمر">54. القمر</option>
+  <option value="الرحمن">55. الرحمن</option>
+  <option value="الواقعة">56. الواقعة</option>
+  <option value="الحديد">57. الحديد</option>
+  <option value="المجادلة">58. المجادلة</option>
+  <option value="الحشر">59. الحشر</option>
+  <option value="الممتحنة">60. الممتحنة</option>
+  <option value="الصف">61. الصف</option>
+  <option value="الجمعة">62. الجمعة</option>
+  <option value="المنافقون">63. المنافقون</option>
+  <option value="التغابن">64. التغابن</option>
+  <option value="الطلاق">65. الطلاق</option>
+  <option value="التحريم">66. التحريم</option>
+  <option value="الملك">67. الملك</option>
+  <option value="القلم">68. القلم</option>
+  <option value="الحاقة">69. الحاقة</option>
+  <option value="المعارج">70. المعارج</option>
+  <option value="نوح">71. نوح</option>
+  <option value="الجن">72. الجن</option>
+  <option value="المزمل">73. المزمل</option>
+  <option value="المدثر">74. المدثر</option>
+  <option value="القيامة">75. القيامة</option>
+  <option value="الإنسان">76. الإنسان</option>
+  <option value="المرسلات">77. المرسلات</option>
+  <option value="النبأ">78. النبأ</option>
+  <option value="النازعات">79. النازعات</option>
+  <option value="عبس">80. عبس</option>
+  <option value="التكوير">81. التكوير</option>
+  <option value="الانفطار">82. الانفطار</option>
+  <option value="المطففين">83. المطففين</option>
+  <option value="الانشقاق">84. الانشقاق</option>
+  <option value="البروج">85. البروج</option>
+  <option value="الطارق">86. الطارق</option>
+  <option value="الأعلى">87. الأعلى</option>
+  <option value="الغاشية">88. الغاشية</option>
+  <option value="الفجر">89. الفجر</option>
+  <option value="البلد">90. البلد</option>
+  <option value="الشمس">91. الشمس</option>
+  <option value="الليل">92. الليل</option>
+  <option value="الضحى">93. الضحى</option>
+  <option value="الشرح">94. الشرح</option>
+  <option value="التين">95. التين</option>
+  <option value="العلق">96. العلق</option>
+  <option value="القدر">97. القدر</option>
+  <option value="البينة">98. البينة</option>
+  <option value="الزلزلة">99. الزلزلة</option>
+  <option value="العاديات">100. العاديات</option>
+  <option value="القارعة">101. القارعة</option>
+  <option value="التكاثر">102. التكاثر</option>
+  <option value="العصر">103. العصر</option>
+  <option value="الهمزة">104. الهمزة</option>
+  <option value="الفيل">105. الفيل</option>
+  <option value="قريش">106. قريش</option>
+  <option value="الماعون">107. الماعون</option>
+  <option value="الكوثر">108. الكوثر</option>
+  <option value="الكافرون">109. الكافرون</option>
+  <option value="النصر">110. النصر</option>
+  <option value="المسد">111. المسد</option>
+  <option value="الإخلاص">112. الإخلاص</option>
+  <option value="الفلق">113. الفلق</option>
+  <option value="الناس">114. الناس</option>
+</select>
+        <input type="number" id="ayahCount" placeholder="عدد الآيات" min="1" required>
+        <button type="submit" class="btn-primary">إضافة</button>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 مجمع مشعل الحميدي لتحفيظ القرآن الكريم</p>
+  </footer>
+
+  <script src="progress.js"></script>
+</body>
+</html>
